@@ -21,6 +21,18 @@ module.exports = {
             values: [user.user, user.password]
         }).then(data => new Promise((resolve, reject) => resolve(data)));
     },
+    allUsers: async (req, res) => {
+        const users = await query({
+            text: 'select * from users'
+        }).then(data => data.rows);
+        res.json(users);
+    },
+    allProjects: async (req, res) => {
+        const projects = await query({
+            text: 'select * from projects'
+        }).then(data => data.rows);
+        res.json(projects);
+    },
     getProjects: async (req, res) => {
         const { username } = req.body;
         const userId = await query({

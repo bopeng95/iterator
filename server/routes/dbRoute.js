@@ -18,5 +18,7 @@ const verifyToken = (req, res, next) => {
 router.post('/project', dbController.setProject);
 router.post('/addMembers', dbController.addMembers);
 router.post('/getProjects', dbController.getProjects);
+router.get('/allUsers', dbController.allUsers);
+router.get('/allProjects', dbController.allProjects);
 
 module.exports = router;

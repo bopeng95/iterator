@@ -13,9 +13,4 @@ app.use(cookieParser());
 app.use('/auth', authRoute);
 app.use('/db', dbRoute);
 
-// app.get('/hello', dbRoute, (req, res) => {
-//   console.log('res', res.locals);
-//   return res.send('hhiiiiiii');
-// });
-
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+module.exports = app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

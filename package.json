@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --verbose",
     "dev": "webpack-dev-server --env.NODE_ENV=development --open",
     "build": "webpack --env.NODE_ENV=production",
     "prestart": "node server/dbSetup.js",
@@ -33,7 +33,9 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^2.1.1",
+    "jest": "^24.8.0",
     "style-loader": "^0.23.1",
+    "supertest": "^4.0.2",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1"
